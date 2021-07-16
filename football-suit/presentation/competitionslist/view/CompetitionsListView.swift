@@ -2,7 +2,8 @@ import UIKit
 import SnapKit
 
 class CompetitionsListView: UIView, LoadableView {
-    let tableView = UITableView()
+    let collectionView = UICollectionView(frame: .zero,
+                                      collectionViewLayout: UICollectionViewFlowLayout())
     var activityIndicator = UIActivityIndicatorView(style: .large)
     
     init() {
@@ -21,18 +22,18 @@ class CompetitionsListView: UIView, LoadableView {
     }
     
     private func addSubviews() {
-        self.addSubview(self.tableView)
+        self.addSubview(self.collectionView)
     }
     
     private func formatViews() {
         self.backgroundColor = .white
         
-        self.tableView.backgroundColor = .clear
-        self.tableView.tableFooterView = UIView()
+        self.collectionView.backgroundColor = .clear
+        self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
     }
     
     private func addConstraintsToSubviews() {
-        tableView.snp.makeConstraints { make in
+        collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

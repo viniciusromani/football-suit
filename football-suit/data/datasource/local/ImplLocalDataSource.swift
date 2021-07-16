@@ -5,20 +5,22 @@ class ImplLocalDataSource: LocalDataSource {
         
     }
     
-    func retrieveFlag(for country: String) -> String {
-        switch country {
-        case "Brazil": return "flagBrazil"
-        case "England": return "flagEngland"
-        case "Europe": return "flagEurope"
-        case "France": return "flagFrance"
-        case "Germany": return "flagGermany"
-        case "Italy": return "flagItaly"
-        case "Netherlands": return "flagNetherlands"
-        case "Portugal": return "flagPortugal"
-        case "South America": return "flagSouthAmerica"
-        case "Spain": return "flagSpain"
-        case "World": return "flagWorld"
-        default: return "flagPlaceholder"
+    func retrieveCrest(for championship: String) -> String {
+        switch championship {
+        case "Campeonato Brasileiro Série A": return "crestBrazilianChampionshipSeriesA"
+        case "Championship": return "crestEnglandChampionship"
+        case "Premier League": return "crestEnglandPremierLeague"
+        case "UEFA Champions League": return "crestEuropeChampionsLeague"
+        case "European Championship": return "crestEuropeEurocup"
+        case "Ligue 1": return "crestFranceLigue1"
+        case "Bundesliga": return "crestGermanyBundesliga"
+        case "Serie A": return "crestItalySerieA"
+        case "Eredivisie": return "crestNetherlandsEredivisie"
+        case "Primeira Liga": return "crestPortugalPrimeiraLiga"
+        case "Copa Libertadores": return "crestSouthAmericaLibertadores"
+        case "Primera Division": return "crestSpainLaLiga"
+        case "FIFA World Cup": return "crestWorldFifaWorldCup"
+        default: return ""
         }
     }
 }

@@ -16,17 +16,12 @@ struct CompetitionRepository {
         return self.competitionDataSource.retrieveCompetitions(tier: tier.apiValue)
             .map { entities in
                 return entities.map { entity in
-                    let flag = self.localDataSource.retrieveFlag(for: entity.country.name)
-                    let country = CountryEntity(id: entity.country.id,
-                                                name: entity.country.name,
-                                                flag: flag)
-                    let currentSeason = SeasonEntity(id: entity.currentSeason.id,
-                                                     startDate: entity.currentSeason.startDate,
-                                                     endDate: entity.currentSeason.endDate)
+                    let crest = self.localDataSource.retrieveCrest(for: entity.name)
                     return CompetitionEntity(id: entity.id,
                                              name: entity.name,
-                                             country: country,
-                                             currentSeason: currentSeason)
+                                             crest: crest,
+                                             country: entity.country,
+                                             currentSeason: entity.currentSeason)
                 }
             }
     }
