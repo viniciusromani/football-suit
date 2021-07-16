@@ -25,8 +25,6 @@
 		A17C5709269F948E00A4E62A /* CompetitionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C5708269F948E00A4E62A /* CompetitionModel.swift */; };
 		A17C570B269F957F00A4E62A /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A17C570A269F957F00A4E62A /* CountryModel.swift */; };
 		A18DB09E26A0837400F88FD5 /* LoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB09D26A0837400F88FD5 /* LoadableView.swift */; };
-		A18DB0A126A0850000F88FD5 /* CompetitionListTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB0A026A0850000F88FD5 /* CompetitionListTableViewAdapter.swift */; };
-		A18DB0A326A0868900F88FD5 /* CompetitionListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB0A226A0868900F88FD5 /* CompetitionListTableViewCell.swift */; };
 		A18DB0A526A08BDA00F88FD5 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18DB0A426A08BDA00F88FD5 /* UITableView+Extensions.swift */; };
 		A1966BA526A1D3040053F2AA /* SeasonEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BA426A1D3040053F2AA /* SeasonEntity.swift */; };
 		A1966BA726A1D3B60053F2AA /* SeasonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BA626A1D3B60053F2AA /* SeasonModel.swift */; };
@@ -34,6 +32,9 @@
 		A1966BAC26A1D7690053F2AA /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BAB26A1D7690053F2AA /* CountryViewModel.swift */; };
 		A1966BAE26A1D7830053F2AA /* SeasonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */; };
 		A1966BB226A1DBC70053F2AA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BB126A1DBC70053F2AA /* Date+Extensions.swift */; };
+		A1A138C226A2261100461671 /* CompetitionListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C126A2261100461671 /* CompetitionListCollectionViewCell.swift */; };
+		A1A138C426A22B9200461671 /* CompetitionListCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C326A22B9200461671 /* CompetitionListCollectionViewAdapter.swift */; };
+		A1A138C626A22C5200461671 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C526A22C5200461671 /* UICollectionView+Extensions.swift */; };
 		A1FE1386269F21F00059C8BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE1385269F21F00059C8BD /* AppDelegate.swift */; };
 		A1FE1388269F21F00059C8BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE1387269F21F00059C8BD /* SceneDelegate.swift */; };
 		A1FE138F269F21F20059C8BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1FE138E269F21F20059C8BD /* Assets.xcassets */; };
@@ -66,8 +67,6 @@
 		A17C5708269F948E00A4E62A /* CompetitionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionModel.swift; sourceTree = "<group>"; };
 		A17C570A269F957F00A4E62A /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		A18DB09D26A0837400F88FD5 /* LoadableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadableView.swift; sourceTree = "<group>"; };
-		A18DB0A026A0850000F88FD5 /* CompetitionListTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListTableViewAdapter.swift; sourceTree = "<group>"; };
-		A18DB0A226A0868900F88FD5 /* CompetitionListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListTableViewCell.swift; sourceTree = "<group>"; };
 		A18DB0A426A08BDA00F88FD5 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		A1966BA426A1D3040053F2AA /* SeasonEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonEntity.swift; sourceTree = "<group>"; };
 		A1966BA626A1D3B60053F2AA /* SeasonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonModel.swift; sourceTree = "<group>"; };
@@ -75,6 +74,9 @@
 		A1966BAB26A1D7690053F2AA /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonViewModel.swift; sourceTree = "<group>"; };
 		A1966BB126A1DBC70053F2AA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		A1A138C126A2261100461671 /* CompetitionListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListCollectionViewCell.swift; sourceTree = "<group>"; };
+		A1A138C326A22B9200461671 /* CompetitionListCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListCollectionViewAdapter.swift; sourceTree = "<group>"; };
+		A1A138C526A22C5200461671 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 		A1FE1382269F21F00059C8BD /* football-suit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "football-suit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1FE1385269F21F00059C8BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1FE1387269F21F00059C8BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 			children = (
 				A1368363269F26C3002ADA27 /* UIView+Extensions.swift */,
 				A18DB0A426A08BDA00F88FD5 /* UITableView+Extensions.swift */,
+				A1A138C526A22C5200461671 /* UICollectionView+Extensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -226,15 +229,6 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		A18DB09F26A084E700F88FD5 /* tableview */ = {
-			isa = PBXGroup;
-			children = (
-				A18DB0A026A0850000F88FD5 /* CompetitionListTableViewAdapter.swift */,
-				A18DB0A226A0868900F88FD5 /* CompetitionListTableViewCell.swift */,
-			);
-			path = tableview;
-			sourceTree = "<group>";
-		};
 		A1966BAA26A1D75D0053F2AA /* viewmodel */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +236,15 @@
 				A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		A1A138C026A225FC00461671 /* collectionview */ = {
+			isa = PBXGroup;
+			children = (
+				A1A138C326A22B9200461671 /* CompetitionListCollectionViewAdapter.swift */,
+				A1A138C126A2261100461671 /* CompetitionListCollectionViewCell.swift */,
+			);
+			path = collectionview;
 			sourceTree = "<group>";
 		};
 		A1FE1379269F21F00059C8BD = {
@@ -324,7 +327,7 @@
 		A1FE13A3269F24C60059C8BD /* view */ = {
 			isa = PBXGroup;
 			children = (
-				A18DB09F26A084E700F88FD5 /* tableview */,
+				A1A138C026A225FC00461671 /* collectionview */,
 				A1FE13A4269F24D30059C8BD /* CompetitionsListView.swift */,
 			);
 			path = view;
@@ -453,6 +456,7 @@
 				A11BC74D26A0DCA6008E96BC /* ImplLocalDataSource.swift in Sources */,
 				A1FE13A5269F24D30059C8BD /* CompetitionsListView.swift in Sources */,
 				A1368369269F322A002ADA27 /* CountryEntity.swift in Sources */,
+				A1A138C426A22B9200461671 /* CompetitionListCollectionViewAdapter.swift in Sources */,
 				A1966BAC26A1D7690053F2AA /* CountryViewModel.swift in Sources */,
 				A1368367269F3109002ADA27 /* CompetitionEntity.swift in Sources */,
 				A1966BA726A1D3B60053F2AA /* SeasonModel.swift in Sources */,
@@ -469,11 +473,11 @@
 				A1966BB226A1DBC70053F2AA /* Date+Extensions.swift in Sources */,
 				A17C5701269F915B00A4E62A /* CompetitionRepository.swift in Sources */,
 				A1368370269F3706002ADA27 /* CompetitionDataSource.swift in Sources */,
-				A18DB0A326A0868900F88FD5 /* CompetitionListTableViewCell.swift in Sources */,
+				A1A138C226A2261100461671 /* CompetitionListCollectionViewCell.swift in Sources */,
 				A18DB0A526A08BDA00F88FD5 /* UITableView+Extensions.swift in Sources */,
 				A1FE13A2269F24630059C8BD /* CompetitionsListViewModel.swift in Sources */,
 				A1FE1386269F21F00059C8BD /* AppDelegate.swift in Sources */,
-				A18DB0A126A0850000F88FD5 /* CompetitionListTableViewAdapter.swift in Sources */,
+				A1A138C626A22C5200461671 /* UICollectionView+Extensions.swift in Sources */,
 				A11BC74B26A0DC01008E96BC /* LocalDataSource.swift in Sources */,
 				A1FE1388269F21F00059C8BD /* SceneDelegate.swift in Sources */,
 			);

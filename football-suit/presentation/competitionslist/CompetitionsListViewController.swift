@@ -8,8 +8,8 @@ protocol CompetitionsListViewProtocol: AnyObject {
 class CompetitionsListViewController: UIViewController {
     private var competitionsView: CompetitionsListView!
     private let presenter: CompetitionsListPresenter
-    private lazy var adapater = CompetitionListTableViewAdapter(tableView: self.competitionsView.tableView,
-                                                                delegate: self)
+    private lazy var adapter = CompetitionListCollectionViewAdapter(collection: self.competitionsView.collectionView,
+                                                                    delegate: self)
     
     init(presenter: CompetitionsListPresenter) {
         self.presenter = presenter
@@ -37,7 +37,7 @@ class CompetitionsListViewController: UIViewController {
 extension CompetitionsListViewController: CompetitionsListViewProtocol {
     func competitionsFetched(with viewModels: [CompetitionViewModel]) {
         self.competitionsView.removeLoading()
-        self.adapater.set(competitions: viewModels)
+        self.adapter.set(competitions: viewModels)
     }
     
     func errorRetrievingCompetitions() {
@@ -45,6 +45,6 @@ extension CompetitionsListViewController: CompetitionsListViewProtocol {
     }
 }
 
-extension CompetitionsListViewController: CompetitionListTableViewAdapterDelegate {
+extension CompetitionsListViewController: CompetitionListCollectionViewAdapterDelegate {
     
 }
