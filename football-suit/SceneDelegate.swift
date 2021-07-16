@@ -23,8 +23,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // injecting scene
-        let dataSource = ApiCompetitionDataSource(provider: MoyaProvider<Endpoint>(plugins: [NetworkLoggerPlugin()]))
-        let repository = CompetitionRepository(competitionDataSource: dataSource)
+        let competitionsDataSource = ApiCompetitionDataSource(provider: MoyaProvider<Endpoint>(plugins: [NetworkLoggerPlugin()]))
+        let localDataSource = ImplLocalDataSource()
+        let repository = CompetitionRepository(competitionDataSource: competitionsDataSource,
+                                               localDataSource: localDataSource)
         let useCase = RetrieveCompetitionsUseCase(repository: repository)
         let presenter = CompetitionsListPresenter(retrieveCompetitionsUseCase: useCase)
         let viewController = CompetitionsListViewController(presenter: presenter)

@@ -4,6 +4,7 @@ struct CompetitionModel {
     let id: String
     let name: String
     let country: CountryModel
+    let currentSeason: SeasonModel
 }
 
 extension CompetitionModel {
@@ -11,6 +12,7 @@ extension CompetitionModel {
         self.id = String(entity.id)
         self.name = entity.name
         self.country = CountryModel(mapping: entity.country)
+        self.currentSeason = SeasonModel(mapping: entity.currentSeason)
     }
     
     static func asArray(mapping entities: [CompetitionEntity]) -> [CompetitionModel] {

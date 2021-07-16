@@ -39,6 +39,7 @@ extension Endpoint: TargetType {
     }
     
     var headers: [String : String]? {
-        return ["Content-type": "application/json"]
+        return ["Content-type": "application/json",
+                "X-Auth-Token": "aa272edbbe494d2a8a7ae36a262ab411"]
     }
 }

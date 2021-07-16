@@ -1,30 +1,21 @@
 import Foundation
+import UIKit
 
 struct CompetitionViewModel {
     let id: String
     let name: String
     let country: CountryViewModel
+    let currentSeason: SeasonViewModel
 }
 extension CompetitionViewModel {
     init(mapping model: CompetitionModel) {
         self.id = model.id
         self.name = model.name
         self.country = CountryViewModel(mapping: model.country)
+        self.currentSeason = SeasonViewModel(mapping: model.currentSeason)
     }
     
     static func asArray(mapping models: [CompetitionModel]) -> [CompetitionViewModel] {
         return models.compactMap { CompetitionViewModel(mapping: $0) }
-    }
-}
-
-
-struct CountryViewModel {
-    let id: String
-    let name: String
-}
-extension CountryViewModel {
-    init(mapping model: CountryModel) {
-        self.id = model.id
-        self.name = model.name
     }
 }

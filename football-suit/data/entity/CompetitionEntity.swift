@@ -4,6 +4,7 @@ struct CompetitionEntity {
     let id: Int
     let name: String
     let country: CountryEntity
+    let currentSeason: SeasonEntity
 }
 
 extension CompetitionEntity: Codable {
@@ -11,6 +12,7 @@ extension CompetitionEntity: Codable {
         case id
         case name
         case country = "area"
+        case currentSeason
     }
     
     init(from decoder: Decoder) throws {
@@ -18,6 +20,7 @@ extension CompetitionEntity: Codable {
         self.id = try container.decode(Int.self, forKey: .id)
         self.name = try container.decode(String.self, forKey: .name)
         self.country = try container.decode(CountryEntity.self, forKey: .country)
+        self.currentSeason = try container.decode(SeasonEntity.self, forKey: .currentSeason)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -25,6 +28,7 @@ extension CompetitionEntity: Codable {
         try container.encode(self.id, forKey: .id)
         try container.encode(self.name, forKey: .name)
         try container.encode(self.country, forKey: .country)
+        try container.encode(self.currentSeason, forKey: .currentSeason)
     }
 }
 

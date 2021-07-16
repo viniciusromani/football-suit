@@ -1,8 +1,9 @@
 import UIKit
 import SnapKit
 
-class CompetitionsListView: UIView {
-    private let title = UILabel()
+class CompetitionsListView: UIView, LoadableView {
+    let tableView = UITableView()
+    var activityIndicator = UIActivityIndicatorView(style: .large)
     
     init() {
         super.init(frame: .zero)
@@ -20,26 +21,29 @@ class CompetitionsListView: UIView {
     }
     
     private func addSubviews() {
-        self.addSubviews([self.title])
+        self.addSubview(self.tableView)
     }
     
     private func formatViews() {
         self.backgroundColor = .white
         
-        self.title.tintColor = .black
-        self.title.font = .systemFont(ofSize: 24)
-        self.title.textAlignment = .center
+        self.tableView.backgroundColor = .clear
+        self.tableView.tableFooterView = UIView()
     }
     
     private func addConstraintsToSubviews() {
-        title.snp.makeConstraints { make in
+        tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
 }
 
 extension CompetitionsListView {
-    func setTitle(_ title: String) {
-        self.title.text = title
+    func displayLoading() {
+        self.showLoading(at: self)
+    }
+    
+    func removeLoading() {
+        self.hideLoading()
     }
 }
