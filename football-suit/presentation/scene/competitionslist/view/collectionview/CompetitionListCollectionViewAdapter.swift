@@ -1,7 +1,7 @@
 import UIKit
 
 protocol CompetitionListCollectionViewAdapterDelegate: AnyObject {
-    
+    func didSelect(competition: CompetitionViewModel)
 }
 
 class CompetitionListCollectionViewAdapter: NSObject {
@@ -45,7 +45,13 @@ extension CompetitionListCollectionViewAdapter: UICollectionViewDataSource {
 }
 
 extension CompetitionListCollectionViewAdapter: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let unwrapped = self.viewModel else {
+            return
+        }
+        
+        self.delegate.didSelect(competition: unwrapped[indexPath.row])
+    }
 }
 
 extension CompetitionListCollectionViewAdapter: UICollectionViewDelegateFlowLayout {

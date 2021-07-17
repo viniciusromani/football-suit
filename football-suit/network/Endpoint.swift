@@ -3,6 +3,7 @@ import Moya
 
 enum Endpoint {
     case competitions(tier: String)
+    case matches(competitionId: String)
 }
 
 extension Endpoint: TargetType {
@@ -14,19 +15,21 @@ extension Endpoint: TargetType {
         switch self {
         case .competitions:
             return "/competitions"
+        case .matches(let competitionId):
+            return "/competitions/\(competitionId)/matches"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .competitions:
+        case .competitions, .matches:
             return .get
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .competitions:
+        case .competitions, .matches:
             return Data()
         }
     }
@@ -35,6 +38,8 @@ extension Endpoint: TargetType {
         switch self {
         case let .competitions(tier):
             return .requestParameters(parameters: ["plan": tier], encoding: URLEncoding.queryString)
+        case .matches:
+            return .requestPlain
         }
     }
     

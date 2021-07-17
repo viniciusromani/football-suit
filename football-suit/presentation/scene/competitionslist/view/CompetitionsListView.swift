@@ -29,7 +29,7 @@ class CompetitionsListView: UIView, LoadableView {
         self.backgroundColor = .white
         
         self.collectionView.backgroundColor = .clear
-        self.collectionView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+        self.collectionView.contentInset = UIEdgeInsets(top: 30, left: 20, bottom: 10, right: 20)
     }
     
     private func addConstraintsToSubviews() {

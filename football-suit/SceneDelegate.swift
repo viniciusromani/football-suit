@@ -23,7 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         
         // injecting scene
-        let competitionsDataSource = ApiCompetitionDataSource(provider: MoyaProvider<Endpoint>(plugins: [NetworkLoggerPlugin()]))
+        let provider = MoyaProvider<Endpoint>(plugins: [NetworkLoggerPlugin()])
+        let competitionsDataSource = ApiCompetitionDataSource(provider: provider)
         let localDataSource = ImplLocalDataSource()
         let repository = CompetitionRepository(competitionDataSource: competitionsDataSource,
                                                localDataSource: localDataSource)
@@ -32,6 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let viewController = CompetitionsListViewController(presenter: presenter)
         presenter.view = viewController
         let navigation = UINavigationController(rootViewController: viewController)
+        navigation.navigationBar.prefersLargeTitles = true
         // done injecting scene
         
         window.rootViewController = navigation

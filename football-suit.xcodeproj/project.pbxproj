@@ -32,6 +32,22 @@
 		A1966BAC26A1D7690053F2AA /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BAB26A1D7690053F2AA /* CountryViewModel.swift */; };
 		A1966BAE26A1D7830053F2AA /* SeasonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */; };
 		A1966BB226A1DBC70053F2AA /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1966BB126A1DBC70053F2AA /* Date+Extensions.swift */; };
+		A196930626A3239E005D432F /* CompetitionMatchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196930526A3239E005D432F /* CompetitionMatchesViewController.swift */; };
+		A196930826A323A8005D432F /* CompetitionMatchesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196930726A323A8005D432F /* CompetitionMatchesPresenter.swift */; };
+		A196930D26A323BF005D432F /* CompetitionMatchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196930C26A323BF005D432F /* CompetitionMatchesView.swift */; };
+		A196930F26A33068005D432F /* MatchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196930E26A33068005D432F /* MatchEntity.swift */; };
+		A196931126A330E8005D432F /* MatchStatusEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931026A330E8005D432F /* MatchStatusEntity.swift */; };
+		A196931326A331A5005D432F /* TeamEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931226A331A5005D432F /* TeamEntity.swift */; };
+		A196931526A331FD005D432F /* MatchScoreEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931426A331FD005D432F /* MatchScoreEntity.swift */; };
+		A196931826A344DD005D432F /* MatchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931726A344DD005D432F /* MatchDataSource.swift */; };
+		A196931A26A34522005D432F /* ApiMatchDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931926A34522005D432F /* ApiMatchDataSource.swift */; };
+		A196931C26A346B7005D432F /* MatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931B26A346B7005D432F /* MatchRepository.swift */; };
+		A196931E26A3470C005D432F /* RetrieveMatchesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931D26A3470C005D432F /* RetrieveMatchesUseCase.swift */; };
+		A196932026A34741005D432F /* MatchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196931F26A34741005D432F /* MatchModel.swift */; };
+		A196932226A34FA4005D432F /* CompetitionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196932126A34FA4005D432F /* CompetitionViewModel.swift */; };
+		A196932426A35B3A005D432F /* MatchStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196932326A35B3A005D432F /* MatchStatusModel.swift */; };
+		A196932626A35BC2005D432F /* TeamModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196932526A35BC2005D432F /* TeamModel.swift */; };
+		A196932826A35C19005D432F /* MatchScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A196932726A35C19005D432F /* MatchScoreModel.swift */; };
 		A1A138C226A2261100461671 /* CompetitionListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C126A2261100461671 /* CompetitionListCollectionViewCell.swift */; };
 		A1A138C426A22B9200461671 /* CompetitionListCollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C326A22B9200461671 /* CompetitionListCollectionViewAdapter.swift */; };
 		A1A138C626A22C5200461671 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A138C526A22C5200461671 /* UICollectionView+Extensions.swift */; };
@@ -41,7 +57,6 @@
 		A1FE1392269F21F20059C8BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1FE1390269F21F20059C8BD /* LaunchScreen.storyboard */; };
 		A1FE139E269F244C0059C8BD /* CompetitionsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE139D269F244C0059C8BD /* CompetitionsListViewController.swift */; };
 		A1FE13A0269F24570059C8BD /* CompetitionsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE139F269F24570059C8BD /* CompetitionsListPresenter.swift */; };
-		A1FE13A2269F24630059C8BD /* CompetitionsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE13A1269F24630059C8BD /* CompetitionsListViewModel.swift */; };
 		A1FE13A5269F24D30059C8BD /* CompetitionsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE13A4269F24D30059C8BD /* CompetitionsListView.swift */; };
 		EE028EE200B4AF57B4890ADA /* Pods_football_suit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F431F75ECED0D67869CE9C /* Pods_football_suit.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +89,22 @@
 		A1966BAB26A1D7690053F2AA /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonViewModel.swift; sourceTree = "<group>"; };
 		A1966BB126A1DBC70053F2AA /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		A196930526A3239E005D432F /* CompetitionMatchesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionMatchesViewController.swift; sourceTree = "<group>"; };
+		A196930726A323A8005D432F /* CompetitionMatchesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionMatchesPresenter.swift; sourceTree = "<group>"; };
+		A196930C26A323BF005D432F /* CompetitionMatchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionMatchesView.swift; sourceTree = "<group>"; };
+		A196930E26A33068005D432F /* MatchEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchEntity.swift; sourceTree = "<group>"; };
+		A196931026A330E8005D432F /* MatchStatusEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatusEntity.swift; sourceTree = "<group>"; };
+		A196931226A331A5005D432F /* TeamEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamEntity.swift; sourceTree = "<group>"; };
+		A196931426A331FD005D432F /* MatchScoreEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchScoreEntity.swift; sourceTree = "<group>"; };
+		A196931726A344DD005D432F /* MatchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDataSource.swift; sourceTree = "<group>"; };
+		A196931926A34522005D432F /* ApiMatchDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMatchDataSource.swift; sourceTree = "<group>"; };
+		A196931B26A346B7005D432F /* MatchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchRepository.swift; sourceTree = "<group>"; };
+		A196931D26A3470C005D432F /* RetrieveMatchesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrieveMatchesUseCase.swift; sourceTree = "<group>"; };
+		A196931F26A34741005D432F /* MatchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchModel.swift; sourceTree = "<group>"; };
+		A196932126A34FA4005D432F /* CompetitionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionViewModel.swift; sourceTree = "<group>"; };
+		A196932326A35B3A005D432F /* MatchStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchStatusModel.swift; sourceTree = "<group>"; };
+		A196932526A35BC2005D432F /* TeamModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamModel.swift; sourceTree = "<group>"; };
+		A196932726A35C19005D432F /* MatchScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchScoreModel.swift; sourceTree = "<group>"; };
 		A1A138C126A2261100461671 /* CompetitionListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListCollectionViewCell.swift; sourceTree = "<group>"; };
 		A1A138C326A22B9200461671 /* CompetitionListCollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionListCollectionViewAdapter.swift; sourceTree = "<group>"; };
 		A1A138C526A22C5200461671 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
@@ -85,7 +116,6 @@
 		A1FE1393269F21F20059C8BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A1FE139D269F244C0059C8BD /* CompetitionsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsListViewController.swift; sourceTree = "<group>"; };
 		A1FE139F269F24570059C8BD /* CompetitionsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsListPresenter.swift; sourceTree = "<group>"; };
-		A1FE13A1269F24630059C8BD /* CompetitionsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsListViewModel.swift; sourceTree = "<group>"; };
 		A1FE13A4269F24D30059C8BD /* CompetitionsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompetitionsListView.swift; sourceTree = "<group>"; };
 		E3FD2868EE45C0CC31E1609A /* Pods-football-suit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-football-suit.debug.xcconfig"; path = "Target Support Files/Pods-football-suit/Pods-football-suit.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +166,10 @@
 				A1368368269F322A002ADA27 /* CountryEntity.swift */,
 				A16D5CBC26A0712B0083395C /* CompetitionTierEntity.swift */,
 				A1966BA426A1D3040053F2AA /* SeasonEntity.swift */,
+				A196930E26A33068005D432F /* MatchEntity.swift */,
+				A196931026A330E8005D432F /* MatchStatusEntity.swift */,
+				A196931226A331A5005D432F /* TeamEntity.swift */,
+				A196931426A331FD005D432F /* MatchScoreEntity.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -143,6 +177,7 @@
 		A136836A269F32F3002ADA27 /* datasource */ = {
 			isa = PBXGroup;
 			children = (
+				A196931626A344CB005D432F /* match */,
 				A11BC74926A0DBE8008E96BC /* local */,
 				A136836E269F36F5002ADA27 /* competition */,
 			);
@@ -197,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				A17C5700269F915B00A4E62A /* CompetitionRepository.swift */,
+				A196931B26A346B7005D432F /* MatchRepository.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -206,6 +242,7 @@
 			children = (
 				A17C5704269F921000A4E62A /* UseCase.swift */,
 				A17C5706269F93C600A4E62A /* RetrieveCompetitionsUseCase.swift */,
+				A196931D26A3470C005D432F /* RetrieveMatchesUseCase.swift */,
 			);
 			path = usecase;
 			sourceTree = "<group>";
@@ -217,6 +254,10 @@
 				A17C570A269F957F00A4E62A /* CountryModel.swift */,
 				A16D5CBA26A070760083395C /* CompetitionTierModel.swift */,
 				A1966BA626A1D3B60053F2AA /* SeasonModel.swift */,
+				A196931F26A34741005D432F /* MatchModel.swift */,
+				A196932326A35B3A005D432F /* MatchStatusModel.swift */,
+				A196932526A35BC2005D432F /* TeamModel.swift */,
+				A196932726A35C19005D432F /* MatchScoreModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -234,8 +275,46 @@
 			children = (
 				A1966BAB26A1D7690053F2AA /* CountryViewModel.swift */,
 				A1966BAD26A1D7830053F2AA /* SeasonViewModel.swift */,
+				A196932126A34FA4005D432F /* CompetitionViewModel.swift */,
 			);
 			path = viewmodel;
+			sourceTree = "<group>";
+		};
+		A196930326A32337005D432F /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				A1966BAA26A1D75D0053F2AA /* viewmodel */,
+				A196930426A32343005D432F /* competitionmatches */,
+				A1FE139C269F24390059C8BD /* competitionslist */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		A196930426A32343005D432F /* competitionmatches */ = {
+			isa = PBXGroup;
+			children = (
+				A196930B26A323B5005D432F /* view */,
+				A196930526A3239E005D432F /* CompetitionMatchesViewController.swift */,
+				A196930726A323A8005D432F /* CompetitionMatchesPresenter.swift */,
+			);
+			path = competitionmatches;
+			sourceTree = "<group>";
+		};
+		A196930B26A323B5005D432F /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A196930C26A323BF005D432F /* CompetitionMatchesView.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A196931626A344CB005D432F /* match */ = {
+			isa = PBXGroup;
+			children = (
+				A196931726A344DD005D432F /* MatchDataSource.swift */,
+				A196931926A34522005D432F /* ApiMatchDataSource.swift */,
+			);
+			path = match;
 			sourceTree = "<group>";
 		};
 		A1A138C026A225FC00461671 /* collectionview */ = {
@@ -305,10 +384,9 @@
 		A1FE139B269F24310059C8BD /* presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A1966BAA26A1D75D0053F2AA /* viewmodel */,
+				A196930326A32337005D432F /* scene */,
 				A18DB09C26A0836900F88FD5 /* components */,
 				A1368362269F26B0002ADA27 /* extensions */,
-				A1FE139C269F24390059C8BD /* competitionslist */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -319,7 +397,6 @@
 				A1FE13A3269F24C60059C8BD /* view */,
 				A1FE139D269F244C0059C8BD /* CompetitionsListViewController.swift */,
 				A1FE139F269F24570059C8BD /* CompetitionsListPresenter.swift */,
-				A1FE13A1269F24630059C8BD /* CompetitionsListViewModel.swift */,
 			);
 			path = competitionslist;
 			sourceTree = "<group>";
@@ -446,36 +523,51 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A196931C26A346B7005D432F /* MatchRepository.swift in Sources */,
 				A16D5CBD26A0712B0083395C /* CompetitionTierEntity.swift in Sources */,
+				A196932626A35BC2005D432F /* TeamModel.swift in Sources */,
 				A1368364269F26C3002ADA27 /* UIView+Extensions.swift in Sources */,
 				A16D5CBB26A070760083395C /* CompetitionTierModel.swift in Sources */,
 				A1966BA526A1D3040053F2AA /* SeasonEntity.swift in Sources */,
+				A196930D26A323BF005D432F /* CompetitionMatchesView.swift in Sources */,
+				A196932426A35B3A005D432F /* MatchStatusModel.swift in Sources */,
 				A17C5707269F93C600A4E62A /* RetrieveCompetitionsUseCase.swift in Sources */,
 				A1966BAE26A1D7830053F2AA /* SeasonViewModel.swift in Sources */,
 				A17C5705269F921000A4E62A /* UseCase.swift in Sources */,
+				A196931826A344DD005D432F /* MatchDataSource.swift in Sources */,
 				A11BC74D26A0DCA6008E96BC /* ImplLocalDataSource.swift in Sources */,
 				A1FE13A5269F24D30059C8BD /* CompetitionsListView.swift in Sources */,
+				A196932226A34FA4005D432F /* CompetitionViewModel.swift in Sources */,
+				A196932826A35C19005D432F /* MatchScoreModel.swift in Sources */,
 				A1368369269F322A002ADA27 /* CountryEntity.swift in Sources */,
 				A1A138C426A22B9200461671 /* CompetitionListCollectionViewAdapter.swift in Sources */,
 				A1966BAC26A1D7690053F2AA /* CountryViewModel.swift in Sources */,
 				A1368367269F3109002ADA27 /* CompetitionEntity.swift in Sources */,
 				A1966BA726A1D3B60053F2AA /* SeasonModel.swift in Sources */,
+				A196930F26A33068005D432F /* MatchEntity.swift in Sources */,
 				A17C570B269F957F00A4E62A /* CountryModel.swift in Sources */,
 				A136836D269F33B9002ADA27 /* Endpoint.swift in Sources */,
 				A1368372269F388A002ADA27 /* ApiCompetitionDataSource.swift in Sources */,
+				A196931526A331FD005D432F /* MatchScoreEntity.swift in Sources */,
 				A17C56FE269F8C7900A4E62A /* JSONObject.swift in Sources */,
 				A17C5709269F948E00A4E62A /* CompetitionModel.swift in Sources */,
 				A1368375269F3EBE002ADA27 /* JSONParseException.swift in Sources */,
 				A1FE13A0269F24570059C8BD /* CompetitionsListPresenter.swift in Sources */,
 				A1FE139E269F244C0059C8BD /* CompetitionsListViewController.swift in Sources */,
+				A196931126A330E8005D432F /* MatchStatusEntity.swift in Sources */,
+				A196930626A3239E005D432F /* CompetitionMatchesViewController.swift in Sources */,
 				A18DB09E26A0837400F88FD5 /* LoadableView.swift in Sources */,
 				A1966BA926A1D4680053F2AA /* CachedDateFormatter.swift in Sources */,
 				A1966BB226A1DBC70053F2AA /* Date+Extensions.swift in Sources */,
 				A17C5701269F915B00A4E62A /* CompetitionRepository.swift in Sources */,
+				A196931A26A34522005D432F /* ApiMatchDataSource.swift in Sources */,
 				A1368370269F3706002ADA27 /* CompetitionDataSource.swift in Sources */,
+				A196931326A331A5005D432F /* TeamEntity.swift in Sources */,
+				A196931E26A3470C005D432F /* RetrieveMatchesUseCase.swift in Sources */,
+				A196930826A323A8005D432F /* CompetitionMatchesPresenter.swift in Sources */,
+				A196932026A34741005D432F /* MatchModel.swift in Sources */,
 				A1A138C226A2261100461671 /* CompetitionListCollectionViewCell.swift in Sources */,
 				A18DB0A526A08BDA00F88FD5 /* UITableView+Extensions.swift in Sources */,
-				A1FE13A2269F24630059C8BD /* CompetitionsListViewModel.swift in Sources */,
 				A1FE1386269F21F00059C8BD /* AppDelegate.swift in Sources */,
 				A1A138C626A22C5200461671 /* UICollectionView+Extensions.swift in Sources */,
 				A11BC74B26A0DC01008E96BC /* LocalDataSource.swift in Sources */,

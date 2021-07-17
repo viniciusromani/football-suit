@@ -1,4 +1,5 @@
 import UIKit
+import Moya
 
 protocol CompetitionsListViewProtocol: AnyObject {
     func competitionsFetched(with viewModels: [CompetitionViewModel])
@@ -46,5 +47,16 @@ extension CompetitionsListViewController: CompetitionsListViewProtocol {
 }
 
 extension CompetitionsListViewController: CompetitionListCollectionViewAdapterDelegate {
-    
+    func didSelect(competition: CompetitionViewModel) {
+        let provider = MoyaProvider<Endpoint>(plugins: [NetworkLoggerPlugin()])
+        let dataSource = ApiMatchDataSource(provider: provider)
+        let repository = MatchRepository.init(matchDataSource: dataSource)
+        let useCase = RetrieveMatchesUseCase.init(repository: repository)
+        let presenter = CompetitionMatchesPresenter(selectedCompetition: competition,
+                                                    retrieveMatchesUseCase: useCase)
+        let viewController = CompetitionMatchesViewController(presenter: presenter)
+        presenter.view = viewController
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }
