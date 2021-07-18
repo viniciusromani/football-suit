@@ -3,7 +3,7 @@ import Moya
 
 enum Endpoint {
     case competitions(tier: String)
-    case matches(competitionId: String)
+    case matches(competitionId: String, currentRound: Int?)
 }
 
 extension Endpoint: TargetType {
@@ -15,7 +15,7 @@ extension Endpoint: TargetType {
         switch self {
         case .competitions:
             return "/competitions"
-        case .matches(let competitionId):
+        case .matches(let competitionId, _):
             return "/competitions/\(competitionId)/matches"
         }
     }
@@ -38,8 +38,10 @@ extension Endpoint: TargetType {
         switch self {
         case let .competitions(tier):
             return .requestParameters(parameters: ["plan": tier], encoding: URLEncoding.queryString)
-        case .matches:
-            return .requestPlain
+        case .matches(_, let currentRound):
+            return currentRound != nil ?
+                .requestParameters(parameters: ["matchday": currentRound!], encoding: URLEncoding.queryString):
+                .requestPlain
         }
     }
     

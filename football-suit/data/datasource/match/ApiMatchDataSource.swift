@@ -9,8 +9,9 @@ class ApiMatchDataSource: MatchDataSource {
         self.provider = provider
     }
     
-    func retrieveMatches(forCompetition competitionId: String) -> Single<[MatchEntity]> {
-        return self.provider.rx.request(.matches(competitionId: competitionId))
+    func retrieveMatches(forCompetition competitionId: String,
+                         round: Int?) -> Single<[MatchEntity]> {
+        return self.provider.rx.request(.matches(competitionId: competitionId, currentRound: round))
             .debug()
             .filterSuccessfulStatusCodes()
             .map { response in

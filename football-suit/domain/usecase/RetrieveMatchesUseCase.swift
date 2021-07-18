@@ -4,6 +4,7 @@ import RxSwift
 struct RetrieveMatchesUseCase: SingleUseCase {
     struct Params {
         let competitionId: String
+        let currentRound: Int?
     }
     typealias Model = [MatchModel]
     

@@ -9,6 +9,7 @@ struct MatchRepository {
     }
     
     func retrieveMatches(params: RetrieveMatchesUseCase.Params) -> Single<[MatchEntity]> {
-        return self.matchDataSource.retrieveMatches(forCompetition: params.competitionId)
+        return self.matchDataSource.retrieveMatches(forCompetition: params.competitionId,
+                                                    round: params.currentRound)
     }
 }

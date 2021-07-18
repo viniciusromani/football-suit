@@ -26,7 +26,9 @@ extension MatchEntity: Codable {
         self.status = try container.decode(MatchStatusEntity.self, forKey: .status)
         self.homeTeam = try container.decode(TeamEntity.self, forKey: .homeTeam)
         self.awayTeam = try container.decode(TeamEntity.self, forKey: .awayTeam)
-        self.score = try container.decodeIfPresent(MatchScoreEntity.self, forKey: .score)
+        self.score = self.status == .finished ?
+            try container.decodeIfPresent(MatchScoreEntity.self, forKey: .score):
+            nil
     }
     
     func encode(to encoder: Encoder) throws {

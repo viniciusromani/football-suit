@@ -16,7 +16,8 @@ class CompetitionMatchesPresenter {
     }
     
     func retrieveMatches() {
-        let params = RetrieveMatchesUseCase.Params(competitionId: self.selectedCompetition.id)
+        let params = RetrieveMatchesUseCase.Params(competitionId: self.selectedCompetition.id,
+                                                   currentRound: self.selectedCompetition.currentSeason.currentRound)
         self.retrieveMatchesUseCase.execute(with: params).subscribe(onSuccess: { [weak self] matches in
             print(matches)
         }, onError: { [weak self] exception in

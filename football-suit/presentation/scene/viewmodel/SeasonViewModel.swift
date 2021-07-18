@@ -3,10 +3,12 @@ import Foundation
 struct SeasonViewModel {
     let id: String
     let year: String?
+    let currentRound: Int?
 }
 extension SeasonViewModel {
     init(mapping model: SeasonModel) {
         self.id = model.id
+        self.currentRound = model.currentRound
         
         guard let startDate = model.startDate,
               let endDate = model.endDate else {
